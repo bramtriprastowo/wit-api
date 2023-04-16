@@ -3,9 +3,9 @@ const sensorsController = require("../controllers/sensorsController");
 const { verifyAccessToken } = require("../middlewares/verifyToken");
 
 sensorsRouter
-    .get("/", sensorsController.getAllSensors)
-    .post("/", sensorsController.addSensor)
-    .put("/:id", sensorsController.updateSensor)
-    .delete("/:id", sensorsController.deleteSensor)
+    .get("/", verifyAccessToken, sensorsController.getAllSensors)
+    .post("/", verifyAccessToken, sensorsController.addSensor)
+    .put("/:id", verifyAccessToken, sensorsController.updateSensor)
+    .delete("/:id", verifyAccessToken, sensorsController.deleteSensor)
 
 module.exports = sensorsRouter
