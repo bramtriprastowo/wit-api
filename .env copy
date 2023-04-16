@@ -1,0 +1,15 @@
+HOST=
+PORT=3000
+
+# Database
+DB_NAME=wit_database
+DB_USER=root
+DB_PASSWORD=
+DB_HOST=localhost
+DB_PORT=3306
+
+#JWT
+ACCESS_TOKEN_CODE=tokencode
+
+#WEBSOCKET
+WS_PORT=3002
